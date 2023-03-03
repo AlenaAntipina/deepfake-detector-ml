@@ -1,0 +1,39 @@
+version: "3.5"
+
+services:
+ 	
+	backend:
+		build: ./backend
+		ports:
+			- 8080:8080
+		environment:
+			- MONGO_HOST=mongo
+
+	frontend:
+		build: ./frontend
+		ports:
+			- 8080:8080
+
+	cv-service:
+		runtime: nvidia
+		build: ./cv_recognition_services
+		ports:
+			- 9988:9988
+		environment:
+			- MONGO_HOST=mongo
+
+	mongo:
+		image: mongo
+		environment:
+			MONGO_INITDB_USERNAME: admin
+			MONGO_INITDB_PASSWORD: admin
+		ports:
+			- 27017:27017
+
+	minio:
+		image: minio/minio:latest
+		build: ./cv_recognition_services
+		ports:
+			- 9988:9988
+		environment:
+			- MONGO_HOST=mongo
