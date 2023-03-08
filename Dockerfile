@@ -2,7 +2,7 @@ FROM pytorch/pytorch:1.11.0-cuda11.3-cudnn8-runtime
 CMD mkdir app
 WORKDIR app
 
-RUN apt-get update && pip install --upgrade
+RUN apt-get update && pip install pip --upgrade
 COPY . .
 RUN pip install -r requirements.txt
 
