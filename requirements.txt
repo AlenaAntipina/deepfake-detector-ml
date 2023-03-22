@@ -6,6 +6,7 @@ boto3
 scikit-learn
 pytest==4.0.1
 attrs==19.1.0
+pytest
 #decorator==4.2.1
 #dlib==19.9.0
 #entrypoints==0.2.3

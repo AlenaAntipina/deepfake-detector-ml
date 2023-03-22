@@ -1,0 +1,11 @@
+pandas
+scikit-learn
+myplotlib
+clearml==1.7.2
+kaggle
+jupyter==1.0.0
+ipykernel
+opencv-python
+torch
+torchvision
+tensorflow-gpu==2.7.0
