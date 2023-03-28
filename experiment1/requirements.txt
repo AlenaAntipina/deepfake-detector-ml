@@ -1,4 +1,11 @@
-clearml
+clearml==1.7.0
 matplotlib
-
+opencv-python
+tensorflow==2.1.0
+pydantic-yaml==0.8.0
+pillow==9.2.0
+tqdm==4.64.1
 apex
+av
+retina-face
+filetype
